@@ -209,7 +209,7 @@ tbr.value = rbr;
 block.style.borderRadius = rtl + 'px '+ rtr + 'px '+ rbr + 'px '+ rbl + 'px ';
 }*/
 
-document.getElementById('nav').onmouseover = function(event)
+/*document.getElementById('nav').onmouseover = function(event)
 {
 	var target = event.target;
 	if(target.className == 'menu-item')
@@ -236,5 +236,24 @@ function closeMenu()
 	for (var i=0; i<submenu.length; i++)
 	{
 		submenu[i].style.display = "none";
+	}
+}*/
+
+
+var modal=document.getElementById('myModal');
+var btn = document.getElementById('myButton');
+var span = document.getElementById('close');
+
+btn.onclick = function() {
+	modal.style.display = 'block';
+}
+
+span.onclick = function() {
+	modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+	if(event.target == modal) {
+		modal.style.display = 'none';
 	}
 }
