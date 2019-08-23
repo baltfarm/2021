@@ -394,21 +394,15 @@ for(var i=0; i < myNodelist.length; i++){
 }
 
 var close = document.getElementsByClassName("close");
-for(var i=0; i < close.length; i++)
-{
-	close[i].onclick = function () {
-		var div = this.parentElement;
-		div.style.display = "none";
-	}
-}
+cross();
+
 var list = document.querySelector("ul");
 list.addEventListener('click', function(ev) {
 	if(ev.target.tagName === 'LI') {
 		ev.target.classList.toggle('checked');
 	}
 }, false);
-
-function newElement() 
+document.getElementById("newElement").onclick = function () 
 {
 	var li = document.createElement("li");
 	var inputValue = document.getElementById("myInput").value;
@@ -425,9 +419,15 @@ function newElement()
 	span.className = "close";
 	span.appendChild(txt);
 	li.appendChild(span);
-	for(var i=0; i<close.length; i++)
+	cross();
+}
+
+function cross()
+{
+	for(var i=0; i < close.length; i++)
 	{
-		close[i].onclick = function() {
+		close[i].onclick = function () 
+		{
 			var div = this.parentElement;
 			div.style.display = "none";
 		}
