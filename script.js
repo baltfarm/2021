@@ -433,3 +433,23 @@ function cross()
 		}
 	}
 }
+
+document.getElementById("alertbutton").onclick = function()
+{
+	var x = document.getElementById("alertwindow");
+	console.log("x= "+x.style.display);
+	if (x.style.display === 'none')
+	{
+		alert("none");
+		x.style.display = 'block';
+	}
+	else
+		{
+			alert("block");
+			x.style.display  = 'none';
+		}
+}
+document.getElementById("closebtn").onclick = function()
+{
+	var x = document.getElementById("alertwindow").style.display = "none";
+}

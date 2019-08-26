@@ -304,14 +304,15 @@ ul li.checked::before {
 	width: 7px;
 }
 
-.close {
+.close, #close {
 	position: absolute;
 	right: 0;
 	top: 0;
+	
 	padding: 12px 16px 12px 16px;
 }
 
-.close:hover {
+.close:hover, #close:hover {
 	background-color: #f44336;
 	clolr: white;
 }
@@ -353,3 +354,28 @@ input {
 	background-color: #bbb;
 }
 
+#alertwindow {
+	display: block;
+	position: relative;
+	padding: 20px;
+	background-color: #f44336;
+	color: white;
+	opacity: 1;
+	transition:  opacity 0.6s;
+	margin-bottom: 15px;
+
+}
+
+#closebtn {
+	position: absolute;
+	right: 0;
+	top: 0;	
+	float: right;
+	color: white;
+	padding: 12px 16px 12px 16px;
+}
+
+#closebtn:hover {
+	color: black;
+	cursor: pointer;
+}
