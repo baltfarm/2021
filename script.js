@@ -530,4 +530,4 @@ $("a #my").attr({
 $("a").click(function(event) {
 	alert('hello!');
 	event.preventDefault();
-}); 
+});  
