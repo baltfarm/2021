@@ -255,7 +255,7 @@ background-color: rgba(0,0,0,0.8);
 	top:-33px;
 
 } */
-
+/* 
 
 * {
 	box-sizing: border-box;
@@ -379,4 +379,9 @@ input {
 #closebtn:hover {
 	color: black;
 	cursor: pointer;
+} */
+.anim {
+	width: 100px;
+	height: 100px;
+	background-color: red;
 }

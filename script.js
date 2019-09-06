@@ -526,8 +526,20 @@ $("a #my").attr({
 	'title':'web'
 })
 */
-
+/*
 $("a").click(function(event) {
 	alert('hello!');
 	event.preventDefault();
+	event.stopPropagation();
+	return false;
 });  
+*/
+/*
+$("#quantity").keyup(function(){
+	var Value = $(this).val();
+	$('#msg').text(Value);
+})*/
+$(".anim").click(function(){
+	$(this).hide(1000);
+	$(this).show(1000,function(){alert("hello");});
+	})
