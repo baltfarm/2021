@@ -384,6 +384,8 @@ if(target.className!="modal-content")
 	}					
 }
 */
+
+/*
 var myNodelist = document.getElementsByTagName('li');
 for(var i=0; i < myNodelist.length; i++){
 	var span = document.createElement("span");
@@ -453,3 +455,79 @@ document.getElementById("closebtn").onclick = function()
 {
 	var x = document.getElementById("alertwindow").style.display = "none";
 }
+*/
+
+// $("h1").css("color","red");
+// document.getElementById("hOne").style.color = 'red';
+/*$(document).ready(function(){
+	$("h1").css("color","red");
+}
+);*/
+/*$(function(){
+	$("h1").css("color","red");
+}
+);*/
+
+/*
+
+$('#btnStart').click(function()
+{
+	$('#message')
+	.html("Привет")
+	.css("background-color", "green")
+	.parent()
+	.css("background-color", "fff4dd")
+	.width(150)
+	.height(80)
+});
+$('#btnReset').click(function()
+{
+	location.reload()
+});*/
+
+// $("#content").css("color", "red");
+// $(".wrapper").css("color", "red")
+/*$("h1, h2").css("color","green")
+$("article h2").css("color", "red")
+$("article").find("h2").css("color", "blue")
+$("h1+p").css("color", "orange")*/
+/*$("#content").prev().css("color", "grey")
+$("#content").next().css("color", "grey")
+$("*").css("color", "orange")
+$("article > h2").css("color", "red")*/
+// $("#content").find("p.text").css("color", "red")
+/*var $content = $("#content")
+$content.find("p.text").css("color", "red")
+                       .css("background-color", "green")*/
+
+/*
+$(".text").css({
+	'color':'red',
+	'margin-top':'10px',
+	'font-size':'16px'})
+*/
+
+/*
+$(".text").css({
+	color:'green',
+	marginTop:'10px',
+	fontSize:'16px',
+	borderStyle:'solid'
+})
+
+$("#content").addClass('name')
+
+$("#content").removeClass('name')
+$("#content").toggle()
+$("#content").toggle()
+$("img").attr('src', '/img/default.jpg')
+$("a #my").attr({
+	'href':'#',
+	'title':'web'
+})
+*/
+
+$("a").click(function(event) {
+	alert('hello!');
+	event.preventDefault();
+});
