@@ -382,6 +382,9 @@ input {
 } */
 .anim {
 	width: 100px;
-	height: 100px;
+	height: 10px;
 	background-color: red;
+}
+.hello{
+	background-color: green;
 }

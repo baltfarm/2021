@@ -539,7 +539,58 @@ $("#quantity").keyup(function(){
 	var Value = $(this).val();
 	$('#msg').text(Value);
 })*/
-$(".anim").click(function(){
+/*$(".anim").click(function(){
 	$(this).hide(1000);
 	$(this).show(1000,function(){alert("hello");});
-	})
+	})*/
+
+/*$(".anim").animate({
+'opacity':'hide'})*/
+
+/*$(".anim").animate({
+'opacity': 0.5,
+'height': '+=50px',
+'width': '+=250px'
+})*/
+
+/*$(".anim").animate({
+'height': '+=50px'})
+          .animate({
+'width': '+=250px'})
+*/
+
+/*jQuery.fx.off = true; // отключение всей анимации */
+
+/*$(".anim").animate({
+'height': '+=50px'}).stop()
+          .animate({
+'width': '+=250px'});
+
+        */
+
+/*var $myDiv = $('<div id="my" class="page"> Hello </div>').appendTo('#content');
+var $myDiv1 = $('<div>Hello</div>').attr({'id':'my', 'class':'page'}).appendTo('#content');
+$("p").after("<hr/>")*/
+/*$("<hr/>").insertAfter('p')*/
+/*$("<hr/>").insertBefore('p')
+$("p").append("<br/><span>","hello","</span>")
+$("<p>HELLO</p>").appendTo("#content")*/
+
+/*$(".second").replaceWith("<h2> New text </h2>");
+$("<h2> New text </h2>").replaceAll(".inner");*/
+/*$(".inner").wrap('<div class="extra-wrapper">Good text</div>')*/
+/*$(".inner").wrapInner('<div class="extra-wrapper">Good text</div>')
+*/
+/*$(".first").clone().appendTo(".second")*/
+
+/*var p;
+$("button").click(function(){
+	if(p){
+		p.appendTo('header');
+		p = null;
+	} else {
+		p = $(".hello").detach();
+	}
+})*/
+
+$(".first").remove() 
