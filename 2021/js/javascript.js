@@ -94,7 +94,7 @@ const personalMovieDB = {
     count: 0,
     movies: {},
     actors: {},
-    genres: {},
+    genres: [],
     privat: false,
     start: function() {
         personalMovieDB.count = +prompt('Сколько фильмов вы уже смотрели?', '');
@@ -144,9 +144,9 @@ const personalMovieDB = {
 
             // console.log(personalMovieDB.genres[index-1]);
         }
-        personalMovieDB.genres.forEach((item, i) => {
-            console.log(`Любимый жанр ${i + 1} - это ${item}`);
-        });
+        // personalMovieDB.genres.forEach((item, i) => {
+        //     console.log(`Любимый жанр ${i + 1} - это ${item}`);
+        // });
     },
     // writeYourGenres: function() {
     //     for (let index = 1; index < 4; index++) {
@@ -169,11 +169,11 @@ const personalMovieDB = {
         }
     }
 }
-personalMovieDB.start();
-personalMovieDB.rememberMyFilms();
-personalMovieDB.detectPersonalLevel();
-personalMovieDB.showMyDB(personalMovieDB.privat);
-// console.log(personalMovieDB);
+ personalMovieDB.start();
+ personalMovieDB.rememberMyFilms();
+ personalMovieDB.detectPersonalLevel();
+ personalMovieDB.showMyDB(personalMovieDB.privat);
+// // console.log(personalMovieDB);
 personalMovieDB.writeYourGenres();
-personalMovieDB.toggleVisibleMyDB();
+ personalMovieDB.toggleVisibleMyDB();
 
