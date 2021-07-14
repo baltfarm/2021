@@ -91,12 +91,12 @@ P.S. Здесь есть несколько вариантов решения з
 // Возьмите свой код из предыдущей практики
 window.addEventListener('DOMContentLoaded', () => {
 
-const btn = document.querySelector("button"),
-      formMovie = document.querySelector('form.add'),
-      newMovie = document.querySelector('.promo__interactive-list'),
+    const btn = document.querySelector("button"),
+        formMovie = document.querySelector('form.add'),
+        newMovie = document.querySelector('.promo__interactive-list'),
     //   deleteMovie = document.querySelectorAll('.delete'),
-      addMovie = formMovie.querySelector('.adding__input'),
-      checkbox = formMovie.querySelector('[type="checkbox"]');
+        addMovie = formMovie.querySelector('.adding__input'),
+        checkbox = formMovie.querySelector('[type="checkbox"]');
           
 
   
@@ -109,32 +109,44 @@ const btn = document.querySelector("button"),
                 <div class="delete"></div>
             </li>
             `
-        });
+        });    
 
         document.querySelectorAll('.delete').forEach((item, i) => {
             console.log('Work2');
             item.addEventListener('click', (event) => {
-                console.log('Work');
                 event.preventDefault();
-                delete movieDB.movies[i];
-                console.log('Work');
-                 newList(newMovie, movieDB.movies);
+                console.log(movieDB.movies);
+                //delete movieDB.movies[i];
+                //item.parentElement.remove();
+                movieDB.movies.splice(i, 1);
+                console.log(item.parentElement);
+                newList(newMovie, movieDB.movies);
             });
         }); 
     };
-
-    formMovie.addEventListener('submit', (event) => {
-        event.preventDefault();
-        if (addMovie.value) {
-            if (addMovie.value.length > 21) {            
-                addMovie.value = addMovie.value.slice(0, 21) + ' ...';
-            }
+     
+    function addMovieToList() {
+        formMovie.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (addMovie.value) {
+                if (addMovie.value.length > 21) {            
+                addMovie.value = addMovie.value.slice(0, 22) + ' ...';
+                };
+                if (checkbox.checked) {
+                    console.log(checkbox.checked);
+                    console.log("Сделать любимым");
+                };
             movieDB.movies.push(addMovie.value);
             movieDB.movies.sort();        
             newList(newMovie, movieDB.movies);
         //addMovie.value = "";
         //formMovie.reset();
             event.target.reset();
-        }
-    });
+            };
+        });
+    };
+
+    newList(newMovie, movieDB.movies);
+    addMovieToList();
+
 });
